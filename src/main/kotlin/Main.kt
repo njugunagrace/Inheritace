@@ -15,11 +15,12 @@ val bus =  Bus("Nissan","single-deck","blue",32)
 
 open class Car (var make:String, var model:String, var color:String, var capacity:Int){
     fun carry(people:Int){
-        var x = people - capacity
+
         if (people == capacity){
             println("Carrying ${people} passengers")
         }
         else if (people > capacity) {
+            var x = people - capacity
             println("Over capacity by $x people")
         }
     }
@@ -42,10 +43,9 @@ class Bus( make:String,  model:String,  color:String,  capacity:Int): Car(make, 
     }
 
     override fun calculateParkingFees(hours: Int): Int {
-        var calculate = 20 * hours * capacity
+        var calculate =  hours * capacity
         return calculate
     }
-
 
 
 }
